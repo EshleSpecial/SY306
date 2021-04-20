@@ -1,0 +1,80 @@
+<!-- login.html -->
+<!-- the html setup for our login page -->
+<!-- McKenzie Eshleman -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://www.usna.edu/CMS/_standard3.0/_files/img/favicon/crest.png">
+    <title>MIDS Message Board | Log In</title>
+    <!-- link to our stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Where we will link our JS File-->
+    <script src="#"></script>
+    <style>
+        /* if there's an input error the text color is yellow */
+        
+        .validation_error {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="center-align">MIDS Message Board</h1>
+    <h5 class="center-align">Please log in below</h5>
+
+    <div class="row">
+
+        <form class="col s6 offset-s3" name="signupform" onsubmit="return checkform() && validateForm_login();" action="#">
+            <input type="hidden" name="newUser" value="False">
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- username input with error checking -->
+                    <input name="Username" id="username" onblur="validateUsername()" placeholder="Username.." type="text" class="validate">
+                    <!-- div class for username errors if there is one -->
+                    <div class="validation_error" id="usernameerrors"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- password input with error checking -->
+                    <input id="pswd" name="Password" onblur="validatePswd_login()" placeholder="Password.." type="password" class="validate">
+                    <!-- div class for password errors if there are any -->
+                    <div class="validation_error" id="pswderrors"></div>
+                </div>
+            </div>
+            <div class="row center-align">
+
+
+
+
+                <!-- submit button -->
+                <button id="submit" class="btn waves-effect waves-light #c62828 red darken-3" type="submit" name="action" style="display: block; margin: 0 auto;">Sign In
+     </button>
+                <!-- Reset button -->
+                <button class="btn-flat waves-effect waves-light #c62828" type="Reset" name="action" style="display: block; margin: 0 auto;">Reset
+     </button>
+                <!-- link to signup.html if the user doesn't already have an account -->
+                <a href="signup.html" class="waves-effect waves-light btn red darken-3">Sign up</a>
+            </div>
+        </form>
+
+
+
+
+
+    </div>
+    <p class="center-align">Dont have an account? <a href="signup.html">Click here</a> to sign up!</p>
+
+
+
+</body>
+
+</html>

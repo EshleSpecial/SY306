@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MIDS Chat | Admin</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://www.usna.edu/CMS/_standard3.0/_files/img/favicon/crest.png">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <p><img src="https://www.usna.edu/CMS/_standard3.0/_files/img/favicon/crest.png" alt="CREST" width="100" height="100" style="padding-right: 10px; padding-top: 0px; float:left" /></p>
+    <div class="Head">
+        <h1>MIDS Chat</h1>
+        <h2> Welcome Admin!</h2>
+    </div>
+
+    <div class="body">
+
+        </p>
+        <br>
+        <table class="col s6 offset-s3">
+            <tr>
+                <td>
+                    <form action="cgi-bin/messagePost.py" method="post">
+                        <p>
+                            <textarea id="ta" rows="5" cols="50" name="Chat"></textarea> <br />
+                            <label for="ta">Where MIDS can chat... </label>
+                            <button class="btn waves-effect waves-light #c62828 red darken-3" type="submit" name="insert" style="display: block; margin: 0 auto;">Chat
+            <i class="material-icons right">record_voice_over</i>
+          </button>
+                        </p>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

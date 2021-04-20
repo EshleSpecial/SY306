@@ -1,0 +1,73 @@
+<!-- signup.html -->
+<!-- html layout for our singup page -->
+<!-- Kestrel Kuhne -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://www.usna.edu/CMS/_standard3.0/_files/img/favicon/crest.png">
+    <title>MIDS Message Board | Sign Up</title>
+    <!-- link to style sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- link to client side error checking javascript -->
+    <script src="#"></script>
+    <style>
+        /* if there's an error then print out the text in yellow */
+        
+        .validation_error {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="center-align">Create an new user account!</h1>
+
+    <div class="row">
+        <!-- Python File needed for the form to work -->
+        <form name="signupform" class="col s6 offset-s3" onsubmit="#" action="#">
+            <input type="hidden" name="newUser" value="True">
+            <div class="row">
+                <div class="input-field col s6">
+                    <!-- make sure first/last name text box has proper input -->
+                    <input placeholder="Your name.." name="Name" id="fl_name" type="text" class="validate" onblur="validate_fl_name()">
+                    <!-- div for error warning to appear if necessary -->
+                    <div class="validation_error" id="fl_name_errors"></div>
+                </div>
+                <div class="input-field col s6">
+                    <!-- make sure username text box has proper input -->
+                    <input id="username" name="Username" onblur="validateUsername()" type="text" placeholder="Your username.." class="validate">
+                    <!-- div for error warning to appear if necessary -->
+                    <div class="validation_error" id="usernameerrors"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <!-- make sure password text box has proper input -->
+                    <input id="pswd" name="Password" type="password" placeholder="Your password.." class="validate" onblur="validatePswd()">
+                    <!-- div for error warning to appear if necessary -->
+                    <div class="validation_error" id="pswderrors"></div>
+                </div>
+            </div>
+            <!-- submit button -->
+            <button id="submit" class="btn waves-effect waves-light #c62828 red darken-3" type="submit" name="action" style="display: block; margin: 0 auto;">Submit
+       <i class="material-icons right">send</i>
+     </button>
+            <!-- reset button -->
+            <button class="btn waves-effect waves-light #c62828 red darken-3" type="reset" name="action" style="display: block; margin: 0 auto;">Reset
+       <i class="material-icons right">delete</i>
+     </button>
+        </form>
+    </div>
+
+    <p class="center-align">Go to <a href="login.html">login page</a> to log in!</p>
+
+
+</body>
+
+</html>
